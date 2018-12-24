@@ -1,6 +1,19 @@
 
-.navbar {
-    max-width: 100%;
-    max-height: 1440px;
-    background-color: #ff0000;
-}
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
