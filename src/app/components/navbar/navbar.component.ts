@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-navbar',
   templateUrl: 'navbar.component.html',
-  styleUrls: ['/src/app/styles/navbar.component.css']
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
   isHandset$: Observable<boolean> = this.breakpointObserver
