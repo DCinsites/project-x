@@ -159,3 +159,17 @@
     width: 24px;
     height: 24px;
   }
+  
+  /*  VIDEO CARD STYLES  */
+
+  .card-container {
+    max-width: 344px;
+   max-height: 376px;
+  }
+  
+  .header-avatar {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+ 
