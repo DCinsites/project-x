@@ -4,6 +4,8 @@
   </div>
 
   <div>
+      <mat-grid-list cols="2" rowHeight="2:1">
+          <mat-grid-tile>1
     <mat-card class="card-container" *ngFor="let item of playlist; let $index = index" (click)="onClickPlaylistItem(item, $index)"
       [class.selected]="item === currentItem">
       <mat-card-header>
@@ -20,17 +22,9 @@
       </mat-card-content>
       <img mat-card-image>
     </mat-card>
+  </mat-grid-tile>
   </div>
+  <div>
   <h1>BOTTOM</h1>
 </div>
 
-
-
-
-@Component({
-  selector: 'grid-list-overview-example',
-  styleUrls: ['grid-list-overview-example.css'],
-  templateUrl: 'grid-list-overview-example.html',
-})
-
-export class GridListOverviewExample {}

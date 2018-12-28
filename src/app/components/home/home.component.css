@@ -25,3 +25,6 @@ video {
 .content {
   align-content: space-around;
 }
+mat-grid-tile {
+  background: lightblue;
+}
