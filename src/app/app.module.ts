@@ -1,5 +1,4 @@
 import { MatVideoModule } from './components/video/video.module';
-import { VideoCardComponent } from './components/video-card/video-card.component';
 import { MaterialModule } from './material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -22,7 +21,6 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    VideoCardComponent,
     HomeComponent,
     ModelProfileComponent,
     ModelAdminComponent,
