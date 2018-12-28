@@ -1,7 +1,9 @@
 <div class="sidenav-container" [class.view-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="nav-toolbar">
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    <h1 class="nav">Responsive App</h1>
+    <h1 class="nav">Welcome</h1>
+    <button mat-icon-button><mat-icon>person</mat-icon></button>
+    <button mat-button>Login</button>
   </mat-toolbar>
 
   <mat-sidenav-container class="flex-sidenav-container"
@@ -15,9 +17,19 @@
 
     <mat-sidenav-content>
         <ng-content></ng-content>
+            <div class="mat-toolbar mat-primary mat-toolbar-single-row footer">
+              <div class="version">
+                Version {{appversion}}
+              </div>
+              <div class="copyright">
+                Nicholas Koehler
+                <mat-icon class="icon">copyright</mat-icon> 2018
+              </div>
+              <div class="license">
+                MIT License
+              </div>
+            </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
-
-<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
 

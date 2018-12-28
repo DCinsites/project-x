@@ -1,0 +1,27 @@
+.card-container {
+  max-width: 344px;
+  max-height: 376px;
+  padding: 10px;
+}
+
+.header-avatar {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  cursor: pointer;
+}
+
+video {
+  max-width: 344px;
+  max-height: 194px;
+  cursor: pointer;
+}
+
+.card-body-content {
+  max-width: 344;
+  max-height: 52px;
+
+}
+
+.content {
+  align-content: space-around;
+}
