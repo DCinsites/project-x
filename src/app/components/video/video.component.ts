@@ -5,6 +5,7 @@ import { EventHandler } from './interfaces/event-handler.interface';
 import { EventService } from './services/event.service';
 
 @Component({
+    // tslint:disable-next-line:component-selector
     selector: 'mat-video',
     templateUrl: './video.component.html',
     styleUrls: ['./video.component.css', './styles/icons.css']
@@ -15,29 +16,29 @@ export class MatVideoComponent implements AfterViewInit, OnDestroy {
 
     @Input() src: string = null;
     @Input() title: string = null;
-    @Input() autoplay: boolean = false;
-    @Input() preload: boolean = true;
-    @Input() loop: boolean = false;
-    @Input() quality: boolean = true;
-    @Input() fullscreen: boolean = true;
-    @Input() download: boolean = false;
+    @Input() autoplay = false;
+    @Input() preload = true;
+    @Input() loop = false;
+    @Input() quality = true;
+    @Input() fullscreen = true;
+    @Input() download = false;
     @Input() color: ThemePalette = 'primary';
-    @Input() spinner: string = 'spin';
+    @Input() spinner = 'spin';
     @Input() poster: string = null;
-    @Input() keyboard: boolean = true;
+    @Input() keyboard = true;
 
-    playing: boolean = false;
+    playing = false;
 
-    isFullscreen: boolean = false;
+    isFullscreen = false;
 
     videoWidth: number;
     videoHeight: number;
 
     videoLoaded = false;
 
-    private isMouseMoving: boolean = false;
+    private isMouseMoving = false;
     private isMouseMovingTimer: NodeJS.Timer;
-    private isMouseMovingTimeout: number = 2000;
+    private isMouseMovingTimeout = 2000;
 
     private events: EventHandler[];
 
@@ -50,6 +51,7 @@ export class MatVideoComponent implements AfterViewInit, OnDestroy {
         this.events = [
             { element: this.video.nativeElement, name: 'loadstart', callback: event => this.videoLoaded = false, dispose: null },
             { element: this.video.nativeElement, name: 'loadedmetadata', callback: event => this.evLoadedMetadata(event), dispose: null },
+            // tslint:disable-next-line:max-line-length
             { element: this.video.nativeElement, name: 'error', callback: event => console.error('Unhandled Video Error', event), dispose: null },
             { element: this.video.nativeElement, name: 'contextmenu', callback: event => event.preventDefault(), dispose: null },
             { element: this.player.nativeElement, name: 'mousemove', callback: event => this.evMouseMove(event), dispose: null }
@@ -63,8 +65,9 @@ export class MatVideoComponent implements AfterViewInit, OnDestroy {
     }
 
     load(): void {
-        if (this.video && this.video.nativeElement)
+        if (this.video && this.video.nativeElement) {
             this.video.nativeElement.load();
+        }
     }
 
     getVideoTag(): HTMLVideoElement | null {
